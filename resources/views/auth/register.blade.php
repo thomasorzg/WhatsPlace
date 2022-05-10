@@ -23,8 +23,8 @@
                     {{Form::open(array('route'=>'register','method'=>'post','id'=>'loginForm'))}}
                     <div class="card-body px-md-5 py-5">
                         <div class="mb-4">
-                            <h6 class="h3">{{__('Create account')}}</h6>
-                            <p class="text-muted mb-0">{{__("Don't have an account? Create your account, it takes less than a minute")}}</p>
+                            <h6 class="h3 text-center">{{__('Create account')}}</h6>
+                            <p class="text-muted mb-0 text-center">{{__("Don't have an account? Create your account, it takes less than a minute")}}</p>
                         </div>
                         <span class="clearfix"></span>
                         <div class="form-group">
@@ -121,12 +121,11 @@
                                         @enderror
                                 </div>
                             @endif
-                        <div class="mt-4">
-                            {{Form::submit(__('Create my account'),array('class'=>'btn btn-sm btn-primary btn-icon rounded-pill','id'=>'saveBtn'))}}
+                        <div class="mt-4 text-center">
+                            {{Form::submit(__('Create my account'),array('class'=>'btn btn-sm btn-success btn-icon rounded-pill text-uppercase','id'=>'saveBtn'))}}
+                            
+                            <a href="{{route('login')}}" class="btn btn-sm btn-primary btn-icon rounded-pill text-uppercase">{{__('Login')}}</a>
                         </div>
-                    </div>
-                    <div class="card-footer px-md-5"><small>{{__('Already have an acocunt?')}}</small>
-                        <a href="{{ route('login') }}" class="small font-weight-bold">{{__('Login')}}</a>
                     </div>
                     {{Form::close()}}
                 </div>

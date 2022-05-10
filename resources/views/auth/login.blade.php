@@ -23,8 +23,8 @@
                 <div class="card shadow zindex-100 mb-0">
                     <div class="card-body px-md-5 py-5">
                         <div class="mb-5">
-                            <h6 class="h3">{{__('Login')}}</h6>
-                            <p class="text-muted mb-0">{{__('Sign in to your account to continue.')}}</p>
+                            <h6 class="h3 text-center">{{__('Login')}}</h6>
+                            <p class="text-muted mb-0 text-center">{{__('Sign in to your account to continue.')}}</p>
                         </div>
                         <span class="clearfix"></span>
                         {{Form::open(array('route'=>'login','method'=>'post','id'=>'loginForm','class'=> 'login-form' ))}}
@@ -87,16 +87,15 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="form-group">
-                            {{Form::submit(__('Login'),array('class'=>'btn btn-sm btn-primary btn-icon rounded-pill text-white','id'=>'saveBtn'))}}
+                        <div class="form-group text-center">
+                            {{Form::submit(__('Login'),array('class'=>'btn btn-sm btn-primary btn-icon rounded-pill text-white text-uppercase','id'=>'saveBtn'))}}
+
+                            @if(Utility::getValByName('signup_button') == 'on')
+                                <a href="{{ route('register',$lang) }}" class="btn btn-sm btn-danger btn-icon rounded-pill text-white text-uppercase">{{__('Create account')}}</a>
+                            @endif
                         </div>
                         {{Form::close()}}
                     </div>
-                    @if(Utility::getValByName('signup_button') == 'on')
-                    <div class="card-footer px-md-5"><small>{{__('Not registered')}}?</small>
-                        <a href="{{route('register',$lang)}}" class="small font-weight-bold">{{__('Create account')}}</a>
-                    </div>
-                    @endif
                 </div>
             </div>
         </div>

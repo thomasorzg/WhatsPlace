@@ -14,8 +14,7 @@
             <div class="page-title">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-md-6 mb-3 mb-md-0">
-                        <h5 class="h3 font-weight-400 mb-0 text-white">{{__('Morning')}}, {{$store->name}}!</h5>
-                        <span class="text-sm text-white opacity-8">{{__('Have a nice day')}}!</span>
+                        <h5 class="h1 font-weight-400 mb-0 text-white"><b>{{__('Morning')}}, {{$store->name}} &#128515;!</b></h5>
                     </div>
                 </div>
             </div>
